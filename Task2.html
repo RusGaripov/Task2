@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title></title>
+<link rel="stylesheet" href="Task2.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+</head>
+   <body>
+      <h1>Редактирование формы :</h1>
+        <div class="form-group">
+            <label for="usr"></label>
+            <input type="text" class="form-control" id="usr"placeholder="Заголовок формы" >
+        </div>
+              <div class="form-group">
+                  <label for="comment"></label>
+                  <textarea class="form-control" rows="5" id="comment" placeholder="Описание формы"></textarea>
+              </div> 
+
+            <h3>Поля формы: </h3>
+                  <div id="ho">
+                    <div class="elem">
+                      <div class="box" id="box1">
+                        <div class="minibox6">
+                          <button type="button" class="btn btn-primary k4 del_b" onclick="this.parentNode.parentNode.parentNode.remove();">Удалить поле</button>
+                        </div>
+                         <div class="minibox">
+                           <div class="form-group2">
+                              <label for="usr"></label>
+                                <input type="text" class="form-control" id="usr" placeholder="Заголовок поля">
+                          </div>
+                          <form name="f1">   
+                              <select name="cars" class="custom-select" id="s1" onchange="var n = this.options.selectedIndex;
+                              var in1 = this.parentNode.parentNode.parentNode.childNodes[5];
+                              var in2 = this.parentNode.parentNode.parentNode.childNodes[7];
+                              showFirst(n,in1,in2);" >
+                                  <option selected>Тип поля</option>
+                                  <option value="Текст-строка" id="sel1">Текст-строка</option>
+                                  <option value="Текст-абзац">Текст-абзац</option>
+                                  <option value="Один из списка">Один из списка</option>
+                                  <option value="Несколько из списка">Несколько из списка</option>
+                                  <option value="Раскрывающийся список">Раскрывающийся список</option>
+                               </select>
+                           </form> 
+                         </div>
+                            <div class="form-group3 group">
+                                <label for="comment"></label>
+                                 <textarea class="form-control" rows="5" id="comment"></textarea>
+                            </div> 
+                            <div class="form-group4 group_2">
+                                <label for="usr"></label>
+                                 <input type="text" class="form-control" id="usr"placeholder="Placeholder" >
+                           </div>          
+                           <form>
+                            <div class="custom-control custom-checkbox minibox3">
+                                <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+                                <label class="custom-control-label" for="customCheck">Обязательный вопрос</label>
+                           </div>
+                           </form> 
+                     </div>
+                 </div>
+                     <div id="container">
+                    </div>
+                </div>
+                  
+                    <div class="minibox4"> 
+                       <button type="button" class="btn btn-primary k3" onclick="addForm()">Добавить поле</button>
+                    </div>
+
+                    <div class="minibox2">
+                       <button type="button" class="btn btn-primary k1">Закрыть</button>
+                       <button type="button" class="btn btn-primary k2">Сохранить</button>
+                   </div>
+
+<script src="Task2.js"></script>
+
+ </body>
+</html>
